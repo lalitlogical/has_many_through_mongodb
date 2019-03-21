@@ -35,10 +35,10 @@ end
 
 This will make available below methods into implemented model.
 
-# RateCard: :DeveloperSkill will create below methods
+`RateCard: :DeveloperSkill` will create below methods
 `has_rate_cards?, has_rate_card_ids?, rate_cards?, rate_cards`
 
-# Skill: :DeveloperSkill will create below methods
+`Skill: :DeveloperSkill` will create below methods
 `has_skills?, has_skill_ids?, skills?, skills`
 
 ## Contributing
