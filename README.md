@@ -1,8 +1,5 @@
 # HasManyThroughMongodb
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/has_many_through_mongodb`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Mongoid gem does not provide the has_many :through association. It's right becuase as a No SQL database MongodDB does not support these things. But sometime required these association by building custom methods. So I had wrapped these moethods into this gems.
 
 ## Installation
 
@@ -22,16 +19,27 @@ Or install it yourself as:
 
 ## Usage
 
-has_many :throught association functionality can be achievable by using `define_through` method into desired model. i.e.
-`define_through(RateCard: :DeveloperSkill, Skill: :DeveloperSkill)`
+has_many :through association functionality can be achievable by using `define_through` method into desired model. 
+
+i.e. 
+```
+class Developer
+  include Mongoid::Document
+  include Mongoid::Timestamps
+  ...
+  has_many :developer_skills, dependent: :destroy
+  define_through(RateCard: :DeveloperSkill, Skill: :DeveloperSkill)
+  ...
+end
+```
 
 This will make available below methods into implemented model.
 
-# RateCard: :DeveloperSkill
-`:has_rate_cards?, :has_rate_card_ids?, :rate_cards`
+# RateCard: :DeveloperSkill will create below methods
+`has_rate_cards?, has_rate_card_ids?, rate_cards?, rate_cards`
 
-# Skill: :DeveloperSkill
-`:has_skills?, :has_skill_ids?, :skills`
+# Skill: :DeveloperSkill will create below methods
+`has_skills?, has_skill_ids?, skills?, skills`
 
 ## Contributing
 
