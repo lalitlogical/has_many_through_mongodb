@@ -3,7 +3,6 @@
 module HasManyThroughMongodb
   module Model
     def define_through **associations
-      p associations
       associations.each do |model, through_model|
         model_name = model.to_s.underscore
         class_eval <<-METHODS, __FILE__, __LINE__ + 1
