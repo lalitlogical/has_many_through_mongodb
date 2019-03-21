@@ -10,9 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["lalit.maurya@engineer.ai"]
 
   spec.summary       = %q{Custom way to define has_many :through association.}
-  spec.description   = %q{Mongoid gem does not provide the has_many :through association.
-    It's right becuase as a No SQL database MongodDB does not support these things.
-    But sometime required these association by building custom methods. So I had wrapped these moethods into this gems.}
+  spec.description   = %q{Mongoid gem does not provide the has_many :through association. It's right because as a No SQL database MongoDB does not support these things. But sometimes required these association by building custom methods. So I had wrapped methods into this gems.}
   spec.homepage      = "https://github.com/lalitlogical/has_many_through_mongodb"
   spec.license       = "MIT"
 
