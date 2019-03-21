@@ -14,12 +14,12 @@ module HasManyThroughMongodb
             #{model_name}_ids.present?
           end
 
-          def has_#{model_name.pluralize}?
-            has_#{model_name}_ids? ? #{model}.in(id: #{model_name}_ids).count != 0 : false
+          def #{model_name.pluralize}
+            #{model}.in(id: #{model_name}_ids)
           end
 
-          def #{model_name.pluralize}
-            has_#{model_name}_ids? ? #{model}.in(id: #{model_name}_ids) : []
+          def has_#{model_name.pluralize}?
+            #{model_name.pluralize}.count != 0
           end
         METHODS
       end
