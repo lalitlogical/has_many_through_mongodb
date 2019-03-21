@@ -1,5 +1,5 @@
 # HasManyThroughMongodb
-Mongoid gem does not provide the has_many :through association. It's right becuase as a No SQL database MongodDB does not support these things. But sometime required these association by building custom methods. So I had wrapped these moethods into this gems.
+Mongoid gem does not provide the has_many :through association. It's right becuase as a No SQL database MongodDB does not support these things. But sometime required these association by building custom methods. So I had wrapped methods into this gems.
 
 ## Installation
 
