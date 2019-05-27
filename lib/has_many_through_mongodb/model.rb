@@ -21,6 +21,10 @@ module HasManyThroughMongodb
           def has_#{model_name.pluralize}?
             #{model_name.pluralize}.count != 0
           end
+
+          def #{model_name.pluralize}?
+            #{model_name.pluralize}.count != 0
+          end
         METHODS
       end
     end
